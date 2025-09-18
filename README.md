@@ -18,8 +18,7 @@
    python3 -m http.server 8000
    ```
 
-2. **访问网站**
-   - 打开浏览器访问：http://localhost:8000
+
 
 3. **使用步骤**
    - 输入访问密码：`123456`
@@ -31,20 +30,12 @@
 
 支持解析包含以下格式的抖音分享文本：
 
-```
-4.89 03/24 cNJ:/ K@W.md 随意"搭讪"韩国美女，印度富人区的三哥能有多自信？ # 外国人 # 歪果仁真会玩 # 印度 # 旅行 # 看世界   复制此链接，打开Dou音搜索，直接观看视频！
-```
+
 
 工具会自动提取其中的有效链接进行解析。
 
 ## 技术实现
 
-- **前端**：HTML5 + CSS3 + JavaScript
-- **API接口**：
-  - 获取视频ID：`http://178.128.6.123/api/douyin/web/get_aweme_id`
-  - 获取视频信息：`http://178.128.6.123/api/douyin/web/fetch_one_video`
-- **正则匹配**：智能提取分享文本中的链接
-- **文件下载**：支持视频和图片文件下载
 
 ## 项目结构
 
@@ -60,7 +51,7 @@ douyin-watermark-remover/
 
 1. **克隆项目**
    ```bash
-   git clone https://github.com/yhdmwyj/douyin-watermark-remover.git
+   git clone https://github.com/your-username/douyin-watermark-remover.git
    cd douyin-watermark-remover
    ```
 
@@ -69,10 +60,7 @@ douyin-watermark-remover/
    python3 -m http.server 8000
    ```
 
-3. **访问应用**
-   ```
-   http://localhost:8000
-   ```
+
 
 ## 注意事项
 
@@ -97,3 +85,5 @@ MIT License
 欢迎提交 Issue 和 Pull Request 来改进这个项目！
 
 ---
+
+**免责声明**：本工具仅供技术学习和研究使用，请遵守相关法律法规和平台规定。
