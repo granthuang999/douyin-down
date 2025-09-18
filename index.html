@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抖音去水印下载工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 密码验证界面 -->
+    <div id="loginContainer" class="container">
+        <div class="login-box">
+            <h1>抖音去水印下载工具</h1>
+            <p>请输入访问密码</p>
+            <div class="input-group">
+                <input type="password" id="passwordInput" placeholder="请输入密码" maxlength="6">
+                <button id="loginBtn" onclick="checkPassword()">进入</button>
+            </div>
+            <div id="loginError" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- 主功能界面 -->
+    <div id="mainContainer" class="container hidden">
+        <div class="main-box">
+            <h1>抖音去水印下载工具</h1>
+            
+            <!-- 链接输入区域 -->
+            <div class="input-section">
+                <h3>粘贴抖音分享链接</h3>
+                <div class="input-group">
+                    <textarea id="linkInput" placeholder="请粘贴抖音分享链接，例如：4.89 03/24 cNJ:/ K@W.md 随意"搭讪"韩国美女，印度富人区的三哥能有多自信？ # 外国人 # 歪果仁真会玩 # 印度 # 旅行 # 看世界   复制此链接，打开Dou音搜索，直接观看视频！"></textarea>
+                    <button id="parseBtn" onclick="parseVideo()">开始解析</button>
+                </div>
+                <div id="parseError" class="error-message"></div>
+            </div>
+
+            <!-- 加载状态 -->
+            <div id="loadingSection" class="loading-section hidden">
+                <div class="loading-spinner"></div>
+                <p>正在解析视频信息...</p>
+            </div>
+
+            <!-- 视频信息展示区域 -->
+            <div id="resultSection" class="result-section hidden">
+                <h3>解析结果</h3>
+                
+                <!-- 视频标题 -->
+                <div class="info-item">
+                    <label>视频标题：</label>
+                    <p id="videoTitle"></p>
+                </div>
+
+                <!-- 封面预览 -->
+                <div class="info-item">
+                    <label>封面预览：</label>
+                    <div class="cover-preview">
+                        <img id="coverImage" src="" alt="视频封面" style="display: none;">
+                        <div id="coverPlaceholder" class="cover-placeholder">暂无封面</div>
+                    </div>
+                </div>
+
+                <!-- 下载按钮 -->
+                <div class="download-section">
+                    <button id="downloadVideoBtn" class="download-btn" onclick="downloadVideo()">
+                        <span>📹</span> 下载视频
+                    </button>
+                    <button id="downloadCoverBtn" class="download-btn" onclick="downloadCover()">
+                        <span>🖼️</span> 下载封面
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
